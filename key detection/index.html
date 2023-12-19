@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Key Detection</title>
+    <link rel="icon" href="https://fav.farm/🔥" />
+  </head>
+  <body>
+    <script>
+     const words = [];
+     const secretCode = "danial";
+
+    window.addEventListener('keyup',(e)=>{
+     console.log(e.key);
+     const small = e.key.toLowerCase();
+     words.push(small);
+     console.log(words);
+     words.splice(-secretCode.length - 1, words.length - secretCode.length )
+     if (words.join('') === secretCode) {
+      window.alert('Congratulations!')
+    };
+    });
+    </script>
+  </body>
+</html>
